@@ -1,7 +1,7 @@
 {
-  "name": "HEXAGONZ",
+  "name": "RIN-BOT",
   "version": "1.0.0",
-  "description": "HEXA",
+  "description": "RIN",
   "main": "main.js",
   "directories": {
     "lib": "lib"
@@ -44,15 +44,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Hexagonz"
+    "url": "git+https://github.com/FALINE-BOT"
   },
   "keywords": [
     "Wasu"
   ],
-  "author": "HEXAGON",
+  "author": "RIN-BOT",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Hexagonz"
+    "url": "https://github.com/FALINE-BOT"
   },
-  "homepage": "https://github.com/Hexagonz"
+  "homepage": "https://github.com/FALINE-BOT"
 }
