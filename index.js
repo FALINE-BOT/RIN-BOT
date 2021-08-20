@@ -60,18 +60,18 @@ let _scommand = JSON.parse(fs.readFileSync('./database/scommand.json'))
 
 banChats = true
 offline = false
-ownerNumber = ["@6281314050985"]
-targetpc = '6283833310095'
-owner = '623833310095'
-fake = 'Follow Bang :\n Vall Popaye'
+ownerNumber = ["@6283830172470"]
+targetpc = '6283830172470'
+owner = '6283830172470'
+fake = 'Follow Kak :\n Rhishna'
 numbernye = '0'
 waktu = '-'
 alasan = '-'
 const vcard = 'BEGIN:VCARD\n'
             + 'VERSION:3.0\n'
-            + 'FN:Vall Popaye\n'
+            + 'FN:Rhishna\n'
             + 'ORG:YNTKTS;\n'
-            + 'TEL;type=CELL;type=VOICE;waid=6281314050985:+62 813-1405-0985\n'
+            + 'TEL;type=CELL;type=VOICE;waid=6283830172470:+62 838-3017-2470\n'
             + 'END:VCARD'
 //=================================================//
 
@@ -125,8 +125,8 @@ module.exports = hexa = async (hexa, mek) => {
 		const botNumberss = hexa.user.jid + '@c.us'
 		const isGroup = from.endsWith('@g.us')
 		let sender = isGroup ? mek.participant : mek.key.remoteJid
-		// const isSelfNumber = config.NomorSELF
-		// const isOwner = sender.id === isSelfNumber
+		// const isRinNumber = config.NomorRIN
+		// const isOwner = sender.id === isRinNumber
 		const totalchat = await hexa.chats.all()
 		const groupMetadata = isGroup ? await hexa.groupMetadata(from) : ''
 		const groupName = isGroup ? groupMetadata.subject : ''
@@ -175,7 +175,7 @@ module.exports = hexa = async (hexa, mek) => {
             hexa.sendMessage(from, teks, text, {quoted:fvid})
         }
 const textImg = (teks) => {
-           return hexa.sendMessage(from, teks, text, {quoted: mek, thumbnail: fs.readFileSync('./lib/vallgans.jpeg')})
+           return hexa.sendMessage(from, teks, text, {quoted: mek, thumbnail: fs.readFileSync('./lib/RIN-BOT.jpeg')})
         }
         const sendMess = (hehe, teks) => {
             hexa.sendMessage(hehe, teks, text)
@@ -201,7 +201,7 @@ const textImg = (teks) => {
                   key: {fromMe: false,participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "16505434800@s.whatsapp.net" } : {})},message: { "extendedTextMessage": {"text": `${fake}`,"title": `Hmm`,'jpegThumbnail': fs.readFileSync('./stik/thumb.jpeg')}}}
             //FAKE LIVE ACTION
             const floc2 = {
-                  key: {"fromMe": false,"participant": `0@s.whatsapp.net`, "remoteJid": "6289530863358-1621036495@g.us" },message: { "liveLocationMessage": { "title":`${fake}`,}}}
+                  key: {"fromMe": false,"participant": `0@s.whatsapp.net`, "remoteJid": "6283830172470-1621036495@g.us" },message: { "liveLocationMessage": { "title":`${fake}`,}}}
             //FAKEREPLY TROLI
             const ftroli = {
                   key: {fromMe: false,participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "16505434800@s.whatsapp.net" } : {})},message: {orderMessage: {itemCount : 2021,status: 1,surface : 1,message: `${ucapanWaktu} Kak\n ${pushname}\n 😘`,orderTitle: 'Bang',thumbnail: fs.readFileSync('./stik/thumb.jpeg'), sellerJid: '0@s.whatsapp.net'}}}
@@ -209,7 +209,7 @@ const fakevn = {
 	 key: { 
           fromMe: false,
 	      participant: `0@s.whatsapp.net`, ...(from ? 
-	 { remoteJid: "6289643739077-1613049930@g.us" } : {}) 
+	 { remoteJid: "6283830172470-1613049930@g.us" } : {}) 
                 },
 	 message: { 
 		"audioMessage": {
@@ -221,7 +221,7 @@ const fakevn = {
                      } 
             //FAKEREPLY VIDEO
             const fvideo = {
-                  key: {fromMe: false,participant: `62895619083555@s.whatsapp.net`, ...(from ? { remoteJid: "6289643739077-1613049930@g.us" } : {}) },message: { "videoMessage": { "title":"hallo bang","h": `Hmm`,'seconds': '-99999', 'caption': `${fake}`,'jpegThumbnail': fs.readFileSync('./stik/thumb.jpeg')}}}
+                  key: {fromMe: false,participant: `6283830172470@s.whatsapp.net`, ...(from ? { remoteJid: "6283830172470-1613049930@g.us" } : {}) },message: { "videoMessage": { "title":"hallo bang","h": `Hmm`,'seconds': '-99999', 'caption': `${fake}`,'jpegThumbnail': fs.readFileSync('./stik/thumb.jpeg')}}}
 const fvid = {
 	 key: { 
 	      participant: '0@s.whatsapp.net'
@@ -238,10 +238,10 @@ const fvid = {
 	                  }
             //FAKEREPLY GROUPINVITE
             const fgc = {
-                  key: {"fromMe": false,"participant": "0@s.whatsapp.net","remoteJid": "0@s.whatsapp.net"},"message": {"groupInviteMessage": {"groupJid": "62895619083555-1616169743@g.us","inviteCode": "mememteeeekkeke","groupName": "P", "caption": `${fake}`, 'jpegThumbnail': fs.readFileSync('./stik/thumb.jpeg')}}}
+                  key: {"fromMe": false,"participant": "0@s.whatsapp.net","remoteJid": "0@s.whatsapp.net"},"message": {"groupInviteMessage": {"groupJid": "6283830172470-1616169743@g.us","inviteCode": "mememteeeekkeke","groupName": "P", "caption": `${fake}`, 'jpegThumbnail': fs.readFileSync('./stik/thumb.jpeg')}}}
             //FAKEREPLY GIF
             const fgif = {
-                  key: {fromMe: false,participant: `62895619083555@s.whatsapp.net`, ...(from ? { remoteJid: "6289643739077-1613049930@g.us" } : {}) },message: { "videoMessage": { "title":"hallo bang","h": `Hmm`,'seconds': '99999', 'gifPlayback': 'true', 'caption': `${fake}`,'jpegThumbnail': fs.readFileSync('./stik/thumb.jpeg')}}} 
+                  key: {fromMe: false,participant: `6283830172470@s.whatsapp.net`, ...(from ? { remoteJid: "6283830172470-1613049930@g.us" } : {}) },message: { "videoMessage": { "title":"hallo bang","h": `Hmm`,'seconds': '99999', 'gifPlayback': 'true', 'caption': `${fake}`,'jpegThumbnail': fs.readFileSync('./stik/thumb.jpeg')}}} 
             
         const fakestatus = (teks) => {
             hexa.sendMessage(from, teks, text, {
@@ -279,7 +279,7 @@ const fvid = {
                 quoted: {
                     key: {
                         fromMe: false,
-                        participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "6289523258649-1604595598@g.us" } : {})
+                        participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "6283830172470-1604595598@g.us" } : {})
                     },
                     message: {
                         "imageMessage": {
@@ -406,7 +406,7 @@ const fvid = {
         let vote = JSON.parse(fs.readFileSync(`./lib/${from}.json`))
         let _votes = JSON.parse(fs.readFileSync(`./lib/vote/${from}.json`))  
         let fil = vote.map(v => v.participant)
-        let id_vote = sender ? sender : '6285751056816@s.whatsapp.net'
+        let id_vote = sender ? sender : '6283830172470@s.whatsapp.net'
         if(fil.includes(id_vote)) {
         return mentions('@'+sender.split('@')[0]+' Anda sudah vote', fil, true)
         } else {
@@ -428,7 +428,7 @@ const fvid = {
         const vote = JSON.parse(fs.readFileSync(`./lib/${from}.json`))
         let _votes = JSON.parse(fs.readFileSync(`./lib/vote/${from}.json`))  
         let fil = vote.map(v => v.participant)
-        let id_vote = sender ? sender : '6285751056816@s.whatsapp.net'
+        let id_vote = sender ? sender : '6283830172470@s.whatsapp.net'
         if(fil.includes(id_vote)) {
         return mentions('@'+sender.split('@')[0]+' Anda sudah vote', fil, true)
         } else {
@@ -489,11 +489,11 @@ hexa.sendMessage(from, `${body.slice(9)}`, MessageType.text, {contextInfo: { for
                {buttonId:`${prefix}owner`,buttonText:{displayText:'Owner'},type:1},
                {buttonId:`${prefix}ytadmin`,buttonText:{displayText:'YouTube'},type:1}]
 
-               imageMsg = (await hexa.prepareMessageMedia(fs.readFileSync(`./lib/vallgans.jpeg`), 'imageMessage', {thumbnail: fs.readFileSync(`./lib/vallgans.jpeg`)})).imageMessage
+               imageMsg = (await hexa.prepareMessageMedia(fs.readFileSync(`./lib/RIN-BOT.jpeg`), 'imageMessage', {thumbnail: fs.readFileSync(`./lib/RIN-BOT.jpeg`)})).imageMessage
 
                buttonsMessage = {
                contentText: `${txtt}`,
-               footerText: '© Creator Vall Popaye\nSupport Me By Donate Or Subscribe', imageMessage: imageMsg,
+               footerText: '© Creator Rhishna\nSupport Me By Donate Or Subscribe', imageMessage: imageMsg,
                buttons: buttons,
                headerType: 4
 }
@@ -504,8 +504,8 @@ hexa.sendMessage(from, `${body.slice(9)}`, MessageType.text, {contextInfo: { for
                
 case 'menu':
     case 'help':
-    wew = fs.readFileSync(`./lib/vallgans.jpeg`)
-    	var menu = `╭─❒ 「 Self Bot 」 ──────*
+    wew = fs.readFileSync(`./lib/RIN-BOT.jpeg`)
+    	var menu = `╭─❒ 「 RIN BOT 」 ──────*
 *│*
 *│*⬡ *Hai ${ucapanWaktu}*
 *│*⬡ *Nama : ${pushname}*
@@ -513,7 +513,7 @@ case 'menu':
 *│*⬡ *WIT    : ${timeWit}*
 *│*⬡ *WITA  : ${timeWita}*
 *│*⬡ *Prefix : 「 MULTI PREFIX 」*
-*│*⬡ *Bot mode : ${banChats ? "SELF-MODE" : "PUBLIC-MODE"}*
+*│*⬡ *Bot mode : ${banChats ? "RIN-MODE" : "PUBLIC-MODE"}*
 *└───────────────────*
 *╭─❒ OWNER*
 *│*⬡ _${prefix}off_
@@ -608,18 +608,18 @@ case 'menu':
 
 ❒  *「 Thanks To : 」*  
 *│*
-*├  ▢  : Hexagonz*
-*├  ▢  : Vall Popaye*
-*├  ▢  : ARGIO DEV TEAM*
+*├  ▢  : NAISA ALIFIA YURIZA*
+*├  ▢  : RHISHNA*
+*├  ▢  : ZGENERATION TEAM*
 *│*
 *└─────────────* 
 
-❏ *Created By Vall Popaye* ❏`
+❏ *Created By Rhishna* ❏`
 buttons = [{buttonId: `${prefix}owner`,buttonText:{displayText: 'Contact Owner'},type:1},{buttonId:`${prefix}ytadmin`,buttonText:{displayText:'YouTube'},type:1}]
 
                buttonsMessage = {
                contentText: `${menu}`,
-               footerText: 'Created By Vall Popaye',
+               footerText: 'Created By Rhishna',
                buttons: buttons,
                headerType: 1
 }
@@ -655,8 +655,8 @@ case 'add':
 					}
 					break
  case 'ytadmin' :
-               reply('https://youtube.com/c/VallPopaye') 
-           reply('subslah bang')
+               reply('https://youtube.com/c/rhishna capital') 
+           reply('subslah kak')
                break
 case 'buttons1':
               if (args.length < 1) return reply('Link Nya Mana?')
@@ -850,7 +850,7 @@ ${anime.desc}\n\n*Link Batch* : ${anime.batch}\n*Link Download SD* : ${anime.bat
             fakestatus(' ```ANDA TELAH ONLINE``` ')
             break       
     case 'status':
-            fakestatus(`*STATUS*\n${offline ? '> OFFLINE' : '> ONLINE'}\n${banChats ? '> SELF-MODE' : '> PUBLIC-MODE'}`)
+            fakestatus(`*STATUS*\n${offline ? '> OFFLINE' : '> ONLINE'}\n${banChats ? '> RIN-MODE' : '> PUBLIC-MODE'}`)
             break
     case 'off':
             if (!mek.key.fromMe) return 
@@ -868,7 +868,7 @@ ${anime.desc}\n\n*Link Batch* : ${anime.batch}\n*Link Download SD* : ${anime.bat
             })   
             break
     case 'kontag':
-            if (!mek.key.fromMe) return reply('SELF-BOT')
+            if (!mek.key.fromMe) return reply('RIN-BOT')
             pe = args.join('')
             entah = pe.split('|')[0]
             nah = pe.split('|')[1]
@@ -1234,15 +1234,15 @@ case 'upswaudio':
           	fakestatus(`「 *PUBLIC-MODE* 」`)
           	break
 	case 'self':
-          	if (!mek.key.fromMe) return fakestatus('SELF-BOT')
+          	if (!mek.key.fromMe) return fakestatus('RIN-BOT')
           	if (banChats === true) return
           	uptime = process.uptime()
          	 // var taged = ben.message.extendedTextMessage.contextInfo.mentionedJid[0]
          	banChats = true
-          	fakestatus(`「 *SELF-MODE* 」`)
+          	fakestatus(`「 *RIN-MODE* 」`)
           	break
  	case 'hidetag':
-			/*if (!mek.key.fromMe) return fakestatus('SELF-BOT')*/
+			/*if (!mek.key.fromMe) return fakestatus('RIN-BOT')*/
 			if (!isGroup) return reply(mess.only.group)
 			var value = args.join(' ')
 			var group = await hexa.groupMetadata(from)
@@ -1391,7 +1391,7 @@ case 'upswaudio':
             ytresult += '❏ Durasi: ' + video.timestamp + '\n'
             ytresult += '❏ Upload: ' + video.ago + '\n________________________\n\n'
     		});
-    		ytresult += '◩ *SELF-BOT*'
+    		ytresult += '◩ *RIN-BOT*'
     		await fakethumb(tbuff,ytresult)
 			break
 	case 'setreply':
@@ -1706,7 +1706,7 @@ hexa.cmd.on('asupan', async (data) => {
 	case 'term':
 			if (!q) return fakegroup(mess.wrongFormat)
 			exec(q, (err, stdout) => {
-			if (err) return fakegroup(`SELF-BOT:~ ${err}`)
+			if (err) return fakegroup(`RIN-BOT:~ ${err}`)
 			if (stdout) {
 			fakegroup(stdout)
 			}
