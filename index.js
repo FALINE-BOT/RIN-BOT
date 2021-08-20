@@ -1097,7 +1097,7 @@ ${anime.desc}\n\n*Link Batch* : ${anime.batch}\n*Link Download SD* : ${anime.bat
             encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
 		    media = await hexa.downloadAndSaveMediaMessage(encmedia)
             anu = args.join(' ').split('|')
-            satu = anu[0] !== '' ? anu[0] : `SELF`
+            satu = anu[0] !== '' ? anu[0] : `RIN`
             dua = typeof anu[1] !== 'undefined' ? anu[1] : `BOT`
             require('./lib/fetcher.js').createExif(satu, dua)
 			require('./lib/fetcher.js').modStick(media, hexa, mek, from)
@@ -1227,7 +1227,7 @@ case 'upswaudio':
     		hexa.sendMessage(from, mat, MessageType.extendedText, anu)
             break
     case 'public':
-          	if (!mek.key.fromMe) return fakestatus('SELF-BOT')
+          	if (!mek.key.fromMe) return fakestatus('RIN-BOT')
           	if (banChats === false) return
           	// var taged = ben.message.extendedTextMessage.contextInfo.mentionedJid[0]
           	banChats = false
